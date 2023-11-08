@@ -4,6 +4,7 @@ import Search from "@/components/Search"
 
 const Home = async() => {
 
+  //fetch data api dari .env await async to json
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=8`)
 
   const anime = await response.json()
