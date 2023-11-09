@@ -11,7 +11,7 @@ const InputSearch = () => {
   const handleSearch = (event) => {
     const keyword = searchRef.current.value;
     // search validation
-    if (!keyword) return;
+    if (!keyword || keyword.trim() == "") return;
     // tipe search validation
     if (event.key == "Enter" || event.type === "click") {
       event.preventDefault();
