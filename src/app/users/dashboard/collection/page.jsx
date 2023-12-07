@@ -14,11 +14,11 @@ const Page = async() =>{
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {collection.map((collect, index) => {
                     return(
-                        <Link key={index} href={`/anime/${collect.anime_mal_id}`} className="relative border-2 border-color-accent">
-                            <Image src="" alt="" width={350} height={350} className="w-full"/>
+                        <Link key={index} href={`/anime/${collect.anime_mal_id}`} className="relative">
+                            <Image src={collect.anime_image} alt={collect.anime_image} width={350} height={350} className="w-full"/>
                                 <div className="absolute flex items-center justify-center bottom-0 w-full bg-color-accent h-16">
                                     <h5 className="text-xl text-center">
-                                        {collect.anime_mal_id}
+                                        {collect.anime_title}
                                     </h5>
                                 </div>
                             </Link>
